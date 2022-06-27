@@ -3,8 +3,8 @@
   "id": "sleep_without_setting_spawn",
   "version": "${version}",
 
-  "name": "Sleep without setting spawn",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Sleep Without Setting Spawn",
+  "description": "Right clicking bed makes you sleep in it. Shift right clicking sets your respawn point.",
   "authors": [
     "mmm1245"
   ],

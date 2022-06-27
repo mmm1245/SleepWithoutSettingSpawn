@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(BedBlock.class)
 public abstract class BedBlockMixin {
-    @Inject(method = "onUse", at = @At(value = "INVOKE", target = "Lnet/minecraft/block/BedBlock;isBedWorking(Lnet/minecraft/world/World;)Z"))
+    @Inject(method = "onUse", at = @At(value = "INVOKE", target = "Lnet/minecraft/block/BedBlock;isBedWorking(Lnet/minecraft/world/World;)Z"), cancellable = true)
     public void callRespawnPointSet(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit, CallbackInfoReturnable<ActionResult> cir){
         if(world.getDimension().bedWorks() && player.isSneaking() && player instanceof ServerPlayerEntity serverPlayer){
             serverPlayer.setSpawnPoint(serverPlayer.world.getRegistryKey(), pos, serverPlayer.getYaw(), false, true);

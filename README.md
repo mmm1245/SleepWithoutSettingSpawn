@@ -1,9 +1,11 @@
-# Fabric Example Mod
+# Sleep Without Setting Spawn
 
-## Setup
+## Usage
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+Right clicking bed makes you sleep in it. 
 
-## License
+Shift right clicking sets your respawn point.
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+## Dependencies
+
+Fabric API - https://www.curseforge.com/minecraft/mc-mods/fabric-api
